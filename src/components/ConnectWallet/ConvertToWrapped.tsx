@@ -16,7 +16,7 @@ export function ConvertToWrapped() {
     error,
     data,
   } = useContractWrite({
-    address: "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
+    address: "0x9c3C9283D3e44854697Cd22D3Faa240Cfb032889",
 
     abi: [
       {
@@ -31,7 +31,7 @@ export function ConvertToWrapped() {
     ],
 
     functionName: "deposit",
-    value: parseEther("0.1"),
+    value: parseEther("0.01"),
     onSettled(data, error) {
       if (error) {
         console.log("Onsettled Error", error);
@@ -48,7 +48,7 @@ export function ConvertToWrapped() {
             className='mt-3 bg-blue-500  text-white font-bold py-2 px-4 rounded'
             onClick={() => DepositWrite?.()}
           >
-            Convert 0.1 matic to WrappedMatic
+            Convert 0.01 matic to WrappedMatic
           </button>
         )}
         {isSuccess && (

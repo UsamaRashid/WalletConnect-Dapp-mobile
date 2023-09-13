@@ -7,21 +7,13 @@ import {
 } from "@web3modal/ethereum";
 import { Web3Modal } from "@web3modal/react";
 import { configureChains, createConfig, WagmiConfig } from "wagmi";
-import {
-  arbitrum,
-  goerli,
-  mainnet,
-  polygon,
-  polygonMumbai,
-} from "wagmi/chains";
+import { polygon, polygonMumbai } from "wagmi/chains";
 
 import ConnectWallet from "@/components/ConnectWallet/ConnectWallet";
-import { SendTransaction } from "@/components/ConnectWallet/SendTransaction";
-import { TransactionComponent } from "@/components/ConnectWallet/TransactionComponent";
 import { ConvertToWrapped } from "@/components/ConnectWallet/ConvertToWrapped";
 import { ConvertBack } from "@/components/ConnectWallet/ConvertBack";
 
-const chains = [polygon];
+const chains = [polygonMumbai];
 const projectId = "ada12c1d0f2d502f905e4d35ef5d752f";
 
 const { publicClient } = configureChains(chains, [w3mProvider({ projectId })]);
@@ -37,14 +29,13 @@ export default function Home() {
     <>
       <WagmiConfig config={wagmiConfig}>
         <ConnectWallet />
-        {/* <SendTransaction /> */}
         <ConvertToWrapped />
         <ConvertBack />
       </WagmiConfig>
       <Web3Modal
         projectId={projectId}
         ethereumClient={ethereumClient}
-        defaultChain={polygon}
+        // defaultChain={polygon}
       />
     </>
   );

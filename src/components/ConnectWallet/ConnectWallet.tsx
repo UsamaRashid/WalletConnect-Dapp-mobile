@@ -6,14 +6,24 @@ import {
   useContractWrite,
   useNetwork,
   usePrepareContractWrite,
+  useSwitchNetwork,
   useWaitForTransaction,
 } from "wagmi";
 import { parseEther } from "viem";
+import { switchNetwork } from "@wagmi/core";
 
 const ConnectWallet = () => {
   const { chain, chains } = useNetwork();
+  const switchChain = async () => {
+    const network = await switchNetwork({
+      chainId: 80001,
+    });
+  };
 
-  const { open } = useWeb3Modal();
+  useEffect(() => {
+    switchChain();
+  }, [chain]);
+
   const { address } = useAccount();
   useEffect(() => {}, [address]);
 
@@ -50,27 +60,9 @@ const ConnectWallet = () => {
       <br />
       {address ? <>{address}</> : <> Not Connected</>}
       <br />
+
       <Web3Button />
       <br />
-      {/* {address && (
-        <button
-          className='mt-3 bg-blue-500  text-white font-bold py-2 px-4 rounded'
-          onClick={() => write?.()}
-        >
-          Contract Write
-        </button>
-      )}
-      {isSuccess && (
-        <div>
-          Successfully minted your NFT!
-          <div>
-            <a href={`https://etherscan.io/tx/${data?.hash}`}>Etherscan</a>
-          </div>
-        </div>
-      )}
-      {(isPrepareError || isError) && (
-        <div>Error: {(prepareError || error)?.message}</div>
-      )} */}
     </div>
   );
 };
