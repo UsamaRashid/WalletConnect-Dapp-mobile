@@ -55,7 +55,7 @@ export function ConvertToWrapped() {
           <div>
             Successfully converted
             <div className='mt-3 bg-blue-500 '>
-              <a href={`https://polygonscan.com/tx/${data?.hash}`}>
+              <a href={`https://mumbai.polygonscan.com/tx/${data?.hash}`}>
                 Mumbai Scan Tx
               </a>
             </div>
