@@ -1,34 +1,97 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js WalletConnect Dapp for Mumbai Testnet
+
+## Overview
+
+This repository contains a Next.js decentralized application (Dapp) that allows users to connect their mobile wallets using WalletConnect and perform transactions on the Mumbai Testnet. Users can also convert MATIC to Wrapped MATIC (WMATIC) and vice versa using this Dapp.
+
+## Features
+
+- WalletConnect Integration: Users can connect their mobile wallets to the Dapp using WalletConnect.
+- Mumbai Testnet: The Dapp is designed to work on the Mumbai Testnet for testing purposes.
+- MATIC to WMATIC Conversion: Users can convert MATIC to WMATIC tokens and vice versa within the Dapp.
+- User-friendly Interface: The Dapp provides an intuitive and user-friendly interface for a seamless experience.
 
 ## Getting Started
 
-First, run the development server:
+To get started with this Dapp, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+1. Clone this repository:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   ```
+   git clone https://github.com/your-username/nextjs-walletconnect-dapp.git
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. Navigate to the project directory:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   ```
+   cd nextjs-walletconnect-dapp
+   ```
 
-## Learn More
+3. Install the project dependencies:
 
-To learn more about Next.js, take a look at the following resources:
+   ```
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Run the Dapp locally:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```
+   npm run dev
+   ```
 
-## Deploy on Vercel
+5. Open your web browser and access the Dapp at `http://localhost:3000`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Usage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Connect Your Wallet:
+
+   - Click on the "Connect Wallet" button to initiate the WalletConnect process.
+   - Scan the QR code with your mobile wallet to establish a connection.
+
+2. Convert MATIC to WMATIC:
+
+   - Enter the amount of MATIC you want to convert in the input field.
+   - Click on the "Convert to WMATIC" button.
+   - Confirm the transaction in your mobile wallet.
+
+3. Convert WMATIC to MATIC:
+
+   - Enter the amount of WMATIC you want to convert in the input field.
+   - Click on the "Convert to MATIC" button.
+   - Confirm the transaction in your mobile wallet.
+
+4. View Transaction History:
+
+   - You can view your transaction history to track your MATIC and WMATIC conversions.
+
+## Technologies Used
+
+- Next.js: The front-end framework for building this Dapp.
+- WalletConnect: For secure mobile wallet integration.
+- Mumbai Testnet: The test network used for blockchain transactions.
+- Web3.js: To interact with the Ethereum blockchain.
+- Solidity: Smart contract development for MATIC and WMATIC conversions.
+
+## Contributing
+
+Contributions to this project are welcome. You can contribute by:
+
+- Reporting issues.
+- Suggesting new features.
+- Submitting pull requests.
+
+Please follow the project's code of conduct and contribution guidelines.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Special thanks to the [Mumbai Testnet](https://mumbai.matic.today/) for providing a test environment.
+- WalletConnect for enabling secure wallet integration.
+- The Ethereum and Polygon communities for their open-source contributions.
+
+Enjoy using the Next.js WalletConnect Dapp for the Mumbai Testnet! If you have any questions or encounter any issues, please feel free to reach out to us.
+
+**Happy Decentralizing!**
